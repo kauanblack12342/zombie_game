@@ -7,9 +7,12 @@ public class diretorScript : MonoBehaviour
    
     void Start()
     {
+        
+    }
+
+    private void Update()
+    {
         Cursor.visible = false;
     }
 
-    
-    
 }
