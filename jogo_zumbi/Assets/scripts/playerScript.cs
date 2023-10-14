@@ -6,10 +6,12 @@ public class playerScript : MonoBehaviour
 {
     public float speed;
     public float rotSpeed;
+    public gunScript gun;
 
     private float movementX;
     private float movementZ;
     private float rot;
+
 
     
     void Start()
@@ -21,7 +23,8 @@ public class playerScript : MonoBehaviour
     void Update()
     {
         Move();
-        girar();
+        
+        atirar();
         
     }
 
@@ -30,17 +33,20 @@ public class playerScript : MonoBehaviour
 
     private void Move()
     {
-       
+        movementX = Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime; 
         movementZ = Input.GetAxisRaw("Vertical") * speed * Time.deltaTime;
         transform.Translate(movementX, 0, movementZ);
 
     }
 
-    private void girar()
-    {
-        rot += Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime;
-        transform.eulerAngles = new Vector3(0,rot,0);
+   
 
+    private void atirar()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            gun.spawnBullet();
+        }
     }
 
    
