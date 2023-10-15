@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class gunScript : MonoBehaviour
 {
-    public GameObject bullet; 
 
+    public Transform gun;
+    public int maxDistance;
+    public float forceIntensity;
 
     void Start()
     {
@@ -13,12 +15,24 @@ public class gunScript : MonoBehaviour
     }
     private void Update()
     {
-        Physics.Raycast(transform.position, Vector3.forward, 10);
+       
     }
 
-    public void spawnBullet()
+    public void shootRaycast()
     {
-        Instantiate(bullet,transform.position,transform.rotation);
-        
+        RaycastHit hitInfo;
+      if( Physics.Raycast(gun.transform.position,gun.forward,out hitInfo, maxDistance))
+           {
+            Rigidbody rigOther = hitInfo.collider.GetComponent<Rigidbody>();
+      if(rigOther == null)
+           {
+               print("atingiu");
+           }
+      else
+           {
+                rigOther.AddForceAtPosition(forceIntensity * gun.forward, hitInfo.point, ForceMode.Impulse);
+           }
+      }
     }
+    
 }

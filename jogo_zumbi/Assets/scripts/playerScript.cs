@@ -45,7 +45,7 @@ public class playerScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            gun.spawnBullet();
+            gun.shootRaycast();
         }
     }
 

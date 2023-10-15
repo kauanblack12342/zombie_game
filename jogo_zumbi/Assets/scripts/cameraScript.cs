@@ -31,4 +31,6 @@ public class cameraScript : MonoBehaviour
         body.localEulerAngles = new Vector3(0, rotationX, 0);
         transform.localEulerAngles = new Vector3 (-rotationY,rotationX,0);
      }
+
+    
 }
