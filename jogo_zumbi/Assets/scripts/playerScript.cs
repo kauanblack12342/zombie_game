@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class playerScript : MonoBehaviour
@@ -7,6 +8,7 @@ public class playerScript : MonoBehaviour
     public float speed;
     public float rotSpeed;
     public gunScript gun;
+    public int vida;
 
     private float movementX;
     private float movementZ;
@@ -24,7 +26,9 @@ public class playerScript : MonoBehaviour
     {
         Move();
         
-        atirar();
+        Atirar();
+
+        Morrer();
         
     }
 
@@ -41,13 +45,22 @@ public class playerScript : MonoBehaviour
 
    
 
-    private void atirar()
+    private void Atirar()
     {
         if (Input.GetButtonDown("Fire1"))
         {
             gun.shootRaycast();
         }
     }
+    
 
+    private void Morrer()
+    {
+        if(vida <= 0)
+        {
+            
+        }
+    }
+    
    
 }

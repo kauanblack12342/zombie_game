@@ -359,8 +359,10 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/scripts/bulletScript.cs"
 "Assets/scripts/cameraScript.cs"
+"Assets/scripts/enemyScript.cs"
 "Assets/scripts/gunScript.cs"
 "Assets/scripts/playerScript.cs"
+"Assets/scripts/UIScript.cs"
 -langversion:9.0
 
 /deterministic
