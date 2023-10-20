@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 156643940}
   - component: {fileID: 156643945}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,8 +157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1363174609}
-  speed: 4
+  speed: 0
   Player: {fileID: 1363174606}
+  vidaInimigo: 0
 --- !u!136 &156643941
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -446,6 +447,8 @@ MonoBehaviour:
   gun: {fileID: 805444428}
   maxDistance: 30
   forceIntensity: 7
+  tiro: {fileID: 2627949140967249448, guid: 8798c916be46bd84ea65665653bd7428, type: 3}
+  tiroTransform: {fileID: 1948456599679419525, guid: 8798c916be46bd84ea65665653bd7428, type: 3}
 --- !u!1 &886264934
 GameObject:
   m_ObjectHideFlags: 0

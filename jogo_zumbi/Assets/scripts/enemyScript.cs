@@ -7,6 +7,7 @@ public class enemyScript : MonoBehaviour
     public Transform player;
     public float speed;
     public playerScript Player;
+    public int vidaInimigo;
 
     private Rigidbody rig;
 
