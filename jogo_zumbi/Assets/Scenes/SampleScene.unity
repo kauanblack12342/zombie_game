@@ -159,7 +159,7 @@ MonoBehaviour:
   player: {fileID: 1363174609}
   speed: 0
   Player: {fileID: 1363174606}
-  vidaInimigo: 0
+  vidaInimigo: 5
 --- !u!136 &156643941
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -449,6 +449,8 @@ MonoBehaviour:
   forceIntensity: 7
   tiro: {fileID: 2627949140967249448, guid: 8798c916be46bd84ea65665653bd7428, type: 3}
   tiroTransform: {fileID: 1948456599679419525, guid: 8798c916be46bd84ea65665653bd7428, type: 3}
+  enemy: {fileID: 156643940}
+  enemyGO: {fileID: 156643939}
 --- !u!1 &886264934
 GameObject:
   m_ObjectHideFlags: 0

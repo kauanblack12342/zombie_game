@@ -29,6 +29,8 @@ public class enemyScript : MonoBehaviour
         transform.position += direcao * speed * Time.deltaTime;
     }
 
+   
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Player")

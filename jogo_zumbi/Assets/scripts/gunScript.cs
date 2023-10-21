@@ -10,6 +10,8 @@ public class gunScript : MonoBehaviour
     public float forceIntensity;
     public GameObject tiro;
     public Transform tiroTransform;
+    public enemyScript enemy;
+    public GameObject enemyGO;
 
 
     void Start()
@@ -35,7 +37,11 @@ public class gunScript : MonoBehaviour
            }
       else
            {
-                rigOther.AddForceAtPosition(forceIntensity * gun.forward, hitInfo.point, ForceMode.Impulse);
+                enemy.vidaInimigo--;
+                if(enemy.vidaInimigo <= 0)
+                {
+                    Destroy(enemyGO);
+                }
                 
            }
       }
