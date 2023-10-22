@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class enemyScript : MonoBehaviour
 {
-    public Transform player;
+    public Transform playerT;
     public float speed;
-    public playerScript Player;
+    public playerScript playerS;
     public int vidaInimigo;
+    
 
-    private Rigidbody rig;
+    
 
     void Start()
     {
-        rig = GetComponent<Rigidbody>();
+        
        
         
     }
@@ -22,20 +23,21 @@ public class enemyScript : MonoBehaviour
     void Update()
     {
        
-        Vector3 direcao = player.position - transform.position;
+        Vector3 direcao = playerT.position - transform.position;
         direcao.Normalize(); 
 
         
         transform.position += direcao * speed * Time.deltaTime;
+        
     }
 
-   
+  
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            Player.vida--;
+            playerS.vida--;
         }
     }
 }

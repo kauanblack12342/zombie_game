@@ -7,11 +7,11 @@ public class gunScript : MonoBehaviour
 
     public Transform gun;
     public int maxDistance;
-    public float forceIntensity;
     public GameObject tiro;
     public Transform tiroTransform;
     public enemyScript enemy;
     public GameObject enemyGO;
+   
 
 
     void Start()
@@ -34,14 +34,17 @@ public class gunScript : MonoBehaviour
       if(rigOther == null)
            {
                Instantiate(tiro,hitInfo.point,tiroTransform.transform.rotation); 
+               
            }
       else
            {
                 enemy.vidaInimigo--;
-                if(enemy.vidaInimigo <= 0)
+                if(enemy.vidaInimigo == 0)
                 {
                     Destroy(enemyGO);
                 }
+                
+                
                 
            }
       }

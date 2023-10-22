@@ -9,6 +9,8 @@ public class playerScript : MonoBehaviour
     public float rotSpeed;
     public gunScript gun;
     public int vida;
+    public diretorSctipt diretor;
+    
 
     private float movementX;
     private float movementZ;
@@ -49,18 +51,20 @@ public class playerScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            
             gun.shootRaycast();
         }
     }
     
-
     private void Morrer()
     {
         if(vida <= 0)
         {
+            diretor.GameOver();
             
         }
     }
+   
     
    
 }
