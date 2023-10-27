@@ -11,6 +11,7 @@ public class playerScript : MonoBehaviour
     public gunScript gun;
     public int vida;
     public diretorSctipt diretor;
+    public float bulletMax;
     
 
     private float movementX;
@@ -60,10 +61,11 @@ public class playerScript : MonoBehaviour
 
     private void Atirar()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && bulletMax > 0)
         {
             
             gun.shootRaycast();
+            bulletMax--;
         }
     }
     

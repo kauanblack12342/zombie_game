@@ -11,6 +11,7 @@ public class gunScript : MonoBehaviour
     public Transform tiroTransform;
     public enemyScript enemy;
     public GameObject enemyGO;
+    
    
 
 

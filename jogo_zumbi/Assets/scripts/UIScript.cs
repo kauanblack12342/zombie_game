@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class UIScript : MonoBehaviour
 {
     public Text hpText;
+    public Text balasText;
     public playerScript playerScript;
+
     void Start()
     {
         
@@ -16,6 +18,7 @@ public class UIScript : MonoBehaviour
     void Update()
     {
         hpText.text = GameObject.Find("player").GetComponent<playerScript>().vida.ToString();
+        balasText.text = GameObject.Find("player").GetComponent<playerScript>().bulletMax.ToString();
 
        
     }
