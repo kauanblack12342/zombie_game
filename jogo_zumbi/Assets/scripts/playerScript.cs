@@ -35,6 +35,7 @@ public class playerScript : MonoBehaviour
         Morrer();
         Run();
         Jump();
+        recarregar();
         
     }
 
@@ -66,6 +67,14 @@ public class playerScript : MonoBehaviour
             
             gun.shootRaycast();
             bulletMax--;
+        }
+    }
+
+    private void recarregar()
+    {
+        if(Input.GetKeyDown(KeyCode.R) && bulletMax < 10)
+        {
+            bulletMax++;
         }
     }
     

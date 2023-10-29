@@ -8,6 +8,7 @@ public class UIScript : MonoBehaviour
     public Text hpText;
     public Text balasText;
     public playerScript playerScript;
+    public Text quantidadeText;
 
     void Start()
     {
